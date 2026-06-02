@@ -23,7 +23,7 @@ jobs:
       config-repo: shared-common/gh-actions-cfg
       config-ref: main
       config-path: glab-groups-debian
-      batch-size: 20
+      batch-size: 25
       emit-parquet: true
       bws-version: ${{ vars.BWS_VERSION }}
       bws-sha256: ${{ vars.BWS_SHA256 }}

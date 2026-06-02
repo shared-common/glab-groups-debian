@@ -13,8 +13,9 @@ class WorkflowContractTests(unittest.TestCase):
             "uses: shared-common/glab-groups-shared/.github/workflows/group-sync-core.yml@main",
             text,
         )
+        self.assertIn("shared-ref: main", text)
         self.assertIn("config-path: glab-groups-debian", text)
-        self.assertIn("batch-size: 20", text)
+        self.assertIn("batch-size: 25", text)
 
 
 if __name__ == "__main__":
