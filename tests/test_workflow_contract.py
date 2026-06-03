@@ -10,11 +10,13 @@ class WorkflowContractTests(unittest.TestCase):
     def test_wrapper_targets_shared_workflow_and_config_path(self) -> None:
         text = WORKFLOW.read_text(encoding="utf-8")
         self.assertIn(
-            "uses: shared-common/glab-groups-shared/.github/workflows/group-sync-core.yml@main",
+            "shared-common/glab-groups-shared/.github/workflows/group-sync-core.yml@main",
             text,
         )
         self.assertIn("shared-ref: main", text)
         self.assertIn("config-path: glab-groups-debian", text)
+        self.assertIn("target-token-secret: GL_PAT_GROUP_DEBIAN_SVC", text)
+        self.assertIn('cron: "5 3,9,15,21 * * *"', text)
         self.assertIn("batch-size: 25", text)
 
 

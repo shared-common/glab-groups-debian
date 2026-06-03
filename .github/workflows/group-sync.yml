@@ -3,7 +3,7 @@ name: debian-group-sync
 
 "on":
   schedule:
-    - cron: "30 */6 * * *"
+    - cron: "5 3,9,15,21 * * *"
   workflow_dispatch:
 
 permissions: {}
@@ -16,13 +16,15 @@ jobs:
   sync:
     permissions:
       contents: read
-    uses: shared-common/glab-groups-shared/.github/workflows/group-sync-core.yml@main
+    uses: >-
+      shared-common/glab-groups-shared/.github/workflows/group-sync-core.yml@main
     with:
       shared-repo: shared-common/glab-groups-shared
       shared-ref: main
       config-repo: shared-common/gh-actions-cfg
       config-ref: main
       config-path: glab-groups-debian
+      target-token-secret: GL_PAT_GROUP_DEBIAN_SVC
       batch-size: 25
       emit-parquet: true
       bws-version: ${{ vars.BWS_VERSION }}
