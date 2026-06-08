@@ -3,7 +3,7 @@ name: debian-group-sync
 
 "on":
   schedule:
-    - cron: "5 3,9,15,21 * * *"
+    - cron: "5 6,18 * * *"
   workflow_dispatch:
 
 permissions: {}
