@@ -7,7 +7,7 @@ Thin GitHub Actions wrapper for the Debian and Salsa namespace mirror.
 - Loads `gh-actions-cfg/glab-groups-debian`
 - Calls the reusable workflow in `glab-groups-shared@mcr/main`
 - Uses the BWS target PAT secret `GL_PAT_GROUP_DEBIAN_SVC`
-- Runs one 25-repository batch per mirror job with five jobs max in parallel
+- Runs deterministic mirror batch shards with five jobs max in parallel
 - Schedules at minute 5 of hours 3, 9, 15, and 21 UTC
 - Publishes plan, report, CSV, JSON, and Parquet artifacts for each run
 
