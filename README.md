@@ -11,7 +11,7 @@ Thin GitHub Actions wrapper for the Debian and Salsa namespace mirror.
   `debian/*` beneath `glab-forks`
 - Runs deterministic mirror batch shards with five jobs max in parallel
 - Schedules at minute 5 of hours 3, 9, 15, and 21 UTC
-- Publishes plan, report, CSV, JSON, and Parquet artifacts for each run
+- Publishes discovery, plan, report, CSV, JSON, and Parquet artifacts for each run
 
 ## Validation
 
