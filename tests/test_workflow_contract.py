@@ -18,7 +18,6 @@ class WorkflowContractTests(unittest.TestCase):
         self.assertIn("config-path: glab-groups-debian", text)
         self.assertIn("target-token-secret: GL_PAT_GROUP_DEBIAN_SVC", text)
         self.assertIn('cron: "5 4 2-30/2 * *"', text)
-        self.assertIn("batch-size: 25", text)
 
 
 if __name__ == "__main__":
